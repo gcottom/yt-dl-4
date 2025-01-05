@@ -1,0 +1,41 @@
+{
+    "name": "YTM Downloader",
+    "description": "This extension is for downloading music directly from YouTube Music",
+    "version": "4.0.2",
+    "manifest_version": 3,
+    "minimum_chrome_version": "101",
+    "permissions": [
+       "activeTab",
+       "scripting",
+       "declarativeNetRequestWithHostAccess",
+       "webNavigation",
+       "webRequest",
+       "downloads",
+       "storage"
+    ],
+    "host_permissions":[
+      "*://music.youtube.com/*"
+    ],
+    "content_scripts": [
+        {
+          "js": [
+            "content.js"
+          ],
+          "css": [ "contentstyles.css" ],
+          "matches": ["https://music.youtube.com/*"]
+        }
+      ],
+      "background": {
+        "service_worker": "background.js"
+     },
+     "web_accessible_resources": [{
+      "matches": ["*://*.youtube.com/*"],
+      "resources": ["download.png", "128.png"]
+}],
+     "icons": {
+      "128": "128.png"
+     },
+     "action": {
+      "default_popup": "popup.html"
+     }
+ }

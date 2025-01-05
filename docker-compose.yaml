@@ -1,0 +1,11 @@
+services:
+  go_services_local_server:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "50999:50999"
+    volumes: 
+      - ./data:/app/data
+      - ./temp:/app/temp
+      - ./settings.yaml:/app/config/config.yaml
