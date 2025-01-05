@@ -1,0 +1,4 @@
+save_dir: ./data # If using Docker, don't change this. If running via script, you can change to your desired directory
+temp_dir: ./temp # If using Docker, don't change this. If running via script, you can change to your desired directory
+spotify_client_id:  # Your Spotify client ID, acquired from the Spotify Developer Dashboard
+spotify_client_secret: # Your Spotify client secret, acquired from the Spotify Developer Dashboard
